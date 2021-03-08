@@ -7598,31 +7598,23 @@ a.close.disabled {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-left: 0;
+  padding-left: 50px;
   margin-right: 15%;
   margin-left: 15%;
   list-style: none;
 }
 
 .carousel-indicators li {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  width: 30px;
-  height: 3px;
-  margin-right: 3px;
-  margin-left: 3px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
   text-indent: -999px;
+  border: 1px solid #fff;
+  border-radius: 10px;
   cursor: pointer;
-  background-color: #fff;
-  background-clip: padding-box;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  opacity: .5;
-  -webkit-transition: opacity 0.6s ease;
-  transition: opacity 0.6s ease;
+  background-color: #000 \9;
+  background-color: transparent;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12102,7 +12094,7 @@ a {
 #commerce .carousel .carousel-caption {
   right: 0;
   left: 0;
-  height: 57px;
+  height: 77px;
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
 }
