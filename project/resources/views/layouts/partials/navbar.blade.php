@@ -38,11 +38,16 @@
                     @auth
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> {{ Auth::user()->adsoyad }} <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> {{ Auth::user()->adsoyad }} </a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Siparişlerim</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Çıkış</a></li>
+                        <li>
+                            <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Çıkış</a>
+                            <form id="logout-form" action="{{ route('kullanici.oturumukapat') }}" method="post" style="display: none;">
+                                @csrf
+                            </form>
+                        </li>
 
                     </ul>
                 </li>

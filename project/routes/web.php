@@ -16,16 +16,21 @@ Route::get('/kategori/{slug_kategoriadi}',[App\Http\Controllers\KategoriControll
 Route::get('/urun/{slug_urunadi}',[App\Http\Controllers\UrunController::class, 'index'])->name('urun');
 Route::post('/ara',[App\Http\Controllers\UrunController::class,'ara'])->name('urun_ara');
 Route::get('/ara',[App\Http\Controllers\UrunController::class,'ara'])->name('urun_ara');
-Route::get('/sepet',[App\Http\Controllers\SepetController::class,'index'])->name('sepet');
-Route::get('/odeme',[App\Http\Controllers\OdemeController::class,'index'])->name('odeme');
-Route::get('/siparisler',[App\Http\Controllers\SiparislerController::class,'index'])->name('siparisler');
-Route::get('/siparisler/{id}',[App\Http\Controllers\SiparislerController::class,'detay'])->name('siparis');
+Route::get('/sepet',[App\Http\Controllers\SepetController::class,'index'])->name('sepet');//->middleware('auth');
+
+
+Route::group(['middleware'=>'auth'],function (){
+    Route::get('/odeme',[App\Http\Controllers\OdemeController::class,'index'])->name('odeme');
+    Route::get('/siparisler',[App\Http\Controllers\SiparislerController::class,'index'])->name('siparisler');
+    Route::get('/siparisler/{id}',[App\Http\Controllers\SiparislerController::class,'detay'])->name('siparis');
+});
 
 Route::group(['prefix'=>'kullanici'], function(){
     Route::get('/kaydol',[App\Http\Controllers\KullaniciController::class,'kaydol_form'])->name('kullanici.kaydol');
     Route::post('/kaydol',[App\Http\Controllers\KullaniciController::class,'kaydol']);
     Route::get('/oturumac',[App\Http\Controllers\KullaniciController::class,'giris_form'])->name('kullanici.oturumac');
     Route::post('/oturumac',[App\Http\Controllers\KullaniciController::class,'giris']);
+    Route::post('/oturumukapat',[App\Http\Controllers\KullaniciController::class,'oturumukapat'])->name('kullanici.oturumukapat');
     Route::get('aktiflestir/{anahtar}',[App\Http\Controllers\KullaniciController::class,'aktiflestir'])->name('aktiflestir');
 });
 

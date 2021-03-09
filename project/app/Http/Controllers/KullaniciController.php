@@ -13,6 +13,10 @@ use Illuminate\Support\Str;
 
 class KullaniciController extends Controller
 {
+    public function __construct(){ //controller icinde middleware
+        $this->middleware('guest')->except('oturumukapat');
+    }
+
     public function kaydol_form(){
         return view('kullanici/kaydol');
     }
@@ -24,6 +28,15 @@ class KullaniciController extends Controller
             'email' => 'required|email',
             'sifre' => 'required'
         ]);
+
+        if (auth()->attempt(['email'=>request('email'),'password'=>request('sifre')], request()->has('benihatirla'))){
+            request()->session()->regenerate();
+            return redirect()->intended('/');
+        }
+        else{
+            $errors=['email','Hatali giris'];
+            return back()->with($errors);
+        }
     }
     public function kaydol()
     {
@@ -67,5 +80,12 @@ class KullaniciController extends Controller
                 ->with('mesaj','Kullanici kaydiniz aktiflesdirelemedi')
                 ->with('mesaj_turu','warning');
         }
+    }
+
+    public function oturumukapat(){
+        Auth::logout();
+        request()->session()->flush();
+        request()->session()->regenerate();
+        return redirect()->to('/');
     }
 }

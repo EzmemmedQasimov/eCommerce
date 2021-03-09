@@ -7,6 +7,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Oturum Aç</div>
                     <div class="panel-body">
+                        @include('layouts.partials.errors')
                         <form class="form-horizontal" role="form" method="POST" action="{{route('kullanici.oturumac')}}">
                             @csrf
                             <div class="form-group">
