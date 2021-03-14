@@ -12,12 +12,14 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "hardevine/shoppingcart": "^2.9",
+        "illuminate/events": "^8.32",
         "laravel/framework": "^8.12",
+        "laravel/helpers": "^1.4",
         "laravel/tinker": "^2.5"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
-        "fzaninotto/faker": "^1.4",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",

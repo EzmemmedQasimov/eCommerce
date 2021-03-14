@@ -18,16 +18,16 @@ class UrunTableSeeder extends Seeder
     {
 
          DB::statement('SET FOREIGN_KEY_CHECKS=0');
-        Urun::truncate();
-        for($i=0;$i<30;$i++){
-        $urun_adi = 'Something';
 
+        for($i=0;$i<30;$i++){
+        $urun_adi = '1Something';
+            Urun::truncate();
            $urun = Urun::create([
                 'urun_adi'=>$urun_adi,
-                'slug'=> Str::slug('Laravel 8 Framework','-'),
-                'fiyati'=> '3.21',
-                'aciklama'=>'Lorem Ipsum is simply dummy text of
-                the printing and typesetting industry. Lorem'
+                'slug'=> Str::slug('3 Laravel 8 Framework','-'),
+                'fiyati'=> '7.62',
+                'aciklama'=>'1m typesettingIp sum is stypeset tingimply dummy text of
+                the prit ypesetting nting and  industry. Lorem'
             ]);
 
            $detay = $urun->detay()->create([

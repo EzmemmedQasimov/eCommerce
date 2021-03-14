@@ -16,7 +16,15 @@ Route::get('/kategori/{slug_kategoriadi}',[App\Http\Controllers\KategoriControll
 Route::get('/urun/{slug_urunadi}',[App\Http\Controllers\UrunController::class, 'index'])->name('urun');
 Route::post('/ara',[App\Http\Controllers\UrunController::class,'ara'])->name('urun_ara');
 Route::get('/ara',[App\Http\Controllers\UrunController::class,'ara'])->name('urun_ara');
-Route::get('/sepet',[App\Http\Controllers\SepetController::class,'index'])->name('sepet');//->middleware('auth');
+
+Route::group(['prefix'=>'sepet'], function(){
+    Route::get('/',[App\Http\Controllers\SepetController::class,'index'])->name('sepet');//->middleware('auth');
+    Route::post('/ekle',[App\Http\Controllers\SepetController::class,'ekle'])->name('sepet.ekle');
+    Route::delete('/kaldir/{rowId}',[App\Http\Controllers\SepetController::class,'kaldir'])->name('sepet.kaldir');
+    Route::delete('/bosalt',[App\Http\Controllers\SepetController::class,'bosalt'])->name('sepet.bosalt');
+    Route::patch('/guncelle/{rowid}',[App\Http\Controllers\SepetController::class,'guncelle'])->name('sepet.guncelle');
+});
+
 
 
 Route::group(['middleware'=>'auth'],function (){

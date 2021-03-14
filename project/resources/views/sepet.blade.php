@@ -4,42 +4,68 @@
     <div class="container">
         <div class="bg-content">
             <h2>Sepet</h2>
+            @include('layouts.partials.alerts')
+            @if(count(Cart::content())>0)
             <table class="table table-bordererd table-hover">
                 <tr>
-                    <th>Ürün</th>
-                    <th>Tutar</th>
+                    <th colspan="2">Ürün</th>
+                    <th>Adet Fiyatı</th>
                     <th>Adet</th>
-                    <th>Ara Toplam</th>
-                    <th>İşlem</th>
+                    <th>Tutar</th>
                 </tr>
+
+                @foreach(Cart::content() as $urunCartItem)
                 <tr>
-                    <td colspan="5">Henüz sepette ürün yok</td>
-                </tr>
-                <tr>
-                    <td> <img src="http://lorempixel.com/120/100/food/2"> Ürün adı</td>
-                    <td>18.99</td>
-                    <td>
-                        <a href="#" class="btn btn-xs btn-default">-</a>
-                        <span style="padding: 10px 20px">1</span>
-                        <a href="#" class="btn btn-xs btn-default">+</a>
+                    <td style="width: 120px;">
+                        <a href="{{route('urun',$urunCartItem->options->get('slug'))}}">
+                            <img src="http://via.placeholder.com/120x100?text=UrunResmi">
+                        </a>
+
                     </td>
-                    <td>18.99</td>
                     <td>
-                        <a href="#">Sil</a>
+                        <a href="{{route('urun',$urunCartItem->options->get('slug'))}}">{{ $urunCartItem->name }} </a>
+                    <form action="{{ route('sepet.kaldir', $urunCartItem->rowId) }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" class="btn btn-danger btn-xs" value="Sepetten Kaldır">
+                    </form>
                     </td>
+                    <td>{{ $urunCartItem->price }} </td>
+                    <td>
+                        <a href="#" class="btn btn-xs btn-default urun-adet-azalt" data-id="{{ $urunCartItem->rowId }}" data-adet="{{ $urunCartItem->qty-1 }}">-</a>
+                        <span style="padding: 10px 20px">{{ $urunCartItem->qty }}</span>
+                        <a href="#" class="btn btn-xs btn-default urun-adet-artir" data-id="{{ $urunCartItem->rowId }}" data-adet="{{ $urunCartItem->qty+1 }}">+</a>
+                    </td>
+                    <td class="text-right">{{ $urunCartItem->subtotal }}</td>
+                </tr>
+                @endforeach
+                <tr>
+                    <th colspan="4" class="text-right">Alt Toplam</th>
+                    <td class="text-right">{{ Cart::subtotal() }} ₺</td>
                 </tr>
                 <tr>
-                    <th></th>
-                    <th></th>
-                    <th>Toplam Tutar (KDV Dahil)</th>
-                    <th>18.99</th>
-                    <th></th>
+                    <th colspan="4" class="text-right">KDV</th>
+                    <td class="text-right">{{ Cart::tax() }} ₺</td>
+                </tr>
+                <tr>
+                    <th colspan="4" class="text-right">Genel Toplam</th>
+                    <td class="text-right">{{ Cart::total() }} ₺</td>
                 </tr>
             </table>
-            <div>
-                <a href="#" class="btn btn-info pull-left">Sepeti Boşalt</a>
+                <form action="{{ route('sepet.bosalt') }}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <input type="submit" class="btn btn-info pull-left" value="Sepeti Bosalt">
+                </form>
                 <a href="#" class="btn btn-success pull-right btn-lg">Ödeme Yap</a>
-            </div>
+            @else
+                <div class="text-center">
+                    <img style="padding-left:25px"  src="https://bi-eticaret.com/images/sepet-bos.png" class="img-fluid" alt="Boş Sepet">
+                    <a href="{{ route('anasayfa') }}"><button class="btn btn-theme">ALIŞVERİŞE BAŞLA</button></a>
+                </div>
+            @endif
         </div>
     </div>
 @endsection
+
+

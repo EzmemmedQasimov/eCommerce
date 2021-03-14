@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand />
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="809203e2-9060-447d-ba27-5fd3b1a96af9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8a58409-4e02-4d7b-99d9-5237edf26fa1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8a58409-4e02-4d7b-99d9-5237edf26fa1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/KullaniciController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/KullaniciController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SepetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SepetController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Kullanici.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Kullanici.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/kullanici/oturumac.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kullanici/oturumac.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/UrunDetay.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UrunDetay.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/UrunTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UrunTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravelecommerce.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/head.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sepet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sepet.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/urun.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/urun.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,6 +144,8 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/hardevine/shoppingcart" />
+      <path value="$PROJECT_DIR$/vendor/laravel/helpers" />
     </include_path>
   </component>
   <component name="ProjectId" id="1pLvfm6seOdI8nnt1o6odi4jy1l" />
@@ -168,18 +182,48 @@
       <workItem from="1615054779939" duration="12117000" />
       <workItem from="1615224600363" duration="10813000" />
       <workItem from="1615238140669" duration="5475000" />
-      <workItem from="1615304407103" duration="3669000" />
+      <workItem from="1615304407103" duration="4542000" />
+      <workItem from="1615313449759" duration="5632000" />
+      <workItem from="1615559718205" duration="10579000" />
+      <workItem from="1615657468523" duration="5188000" />
+      <workItem from="1615748947714" duration="1605000" />
+      <workItem from="1615751826776" duration="5787000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="275" y="21" width="693" height="686" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615054816043">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="21" width="693" height="686" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1615054816043" />
+    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1615317587781">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1615317587781" />
     <state width="246" height="457" key="HiddenNamespacesPopup" timestamp="1615054845634">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
