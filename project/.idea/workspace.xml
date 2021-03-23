@@ -6,16 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="809203e2-9060-447d-ba27-5fd3b1a96af9" name="Default Changelist" comment="v7">
-      <change afterPath="$PROJECT_DIR$/resources/views/yonetim/anasayfa.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/yonetim/layouts/master.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/yonetim/layouts/partials/navbar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/yonetim/layouts/partials/sidebar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/yonetim/oturumac.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8a58409-4e02-4d7b-99d9-5237edf26fa1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8a58409-4e02-4d7b-99d9-5237edf26fa1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/yonetim/kullanici/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/yonetim/kullanici/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_04_172737_create_kullanici_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_04_172737_create_kullanici_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Yonetim/KullaniciController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Yonetim/KullaniciController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Kullanici.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Kullanici.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/yonetim/layouts/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/yonetim/layouts/partials/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/yonetim/layouts/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/yonetim/layouts/partials/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +184,8 @@
       <workItem from="1615834804368" duration="4274000" />
       <workItem from="1616360084927" duration="967000" />
       <workItem from="1616437455171" duration="7166000" />
-      <workItem from="1616505505406" duration="400000" />
+      <workItem from="1616505505406" duration="3750000" />
+      <workItem from="1616517681744" duration="5747000" />
     </task>
     <task id="LOCAL-00001" summary="v7">
       <created>1615757745440</created>
@@ -249,17 +247,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="478" y="85" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1616442154192" />
-    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1616442128918">
+    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1616518100435">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1616442128918" />
+    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1616518100435" />
     <state x="526" y="135" width="485" height="457" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1615839048456">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="526" y="135" width="485" height="457" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1615839048456" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1615306909974">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1616521886269">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1615306909974" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1616521886269" />
   </component>
 </project>

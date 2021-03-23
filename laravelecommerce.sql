@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 23, 2021 at 02:28 PM
+-- Generation Time: Mar 23, 2021 at 07:17 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -105,8 +105,57 @@ CREATE TABLE `kullanici` (
 --
 
 INSERT INTO `kullanici` (`id`, `adsoyad`, `email`, `sifre`, `aktivasyon_anahtari`, `aktif_mi`, `yonetici_mi`, `remember_token`, `olusturulma_tarihi`, `guncelleme_tarihi`, `silinme_tarihi`) VALUES
-(18, 'Əzməmməd Qasımov', 'ezmemmed@yahoo.com', '$2y$10$HCLr6ne1.o3ytad6hOpaO.Z1wkr554yeubNDVxfjLLQqqRzi1NNWq', NULL, 1, 1, '9MbG83tnY2SWjivXA2qlsrHFFBX79w4MfrK98weeNopx64NK0k0NMddyw27B', '2021-03-08 17:53:59', '2021-03-22 20:27:06', NULL),
-(22, 'Nihat Novruzov', 'nihat@gmail.com', '$2y$10$kWCa56HrXB66bVlr6mpJfuMqjpflP1Jz1v4D9hhiDTOqSDzZQeOcS', 'h8nWGZNvrIuotVnQs55a68ssi4zgJjKnRQ29LarZUxU7PV405Pr4BPocZDjH', 0, 0, 'b9Qo1wJD6MXSVsKUGxIcX5f8KzyiP2BPODozZH28Ryhn1UpYQ8oon7vPh5gw', '2021-03-12 10:44:59', '2021-03-13 18:29:10', NULL);
+(1, 'Əzməmməd Qasımov', 'ezmemmed@yahoo.com', '$2y$10$AQASU.R2UHh9u1.ckOhXyeGuS0XThE0NwpxOu4m3sIJctKbl7jMiy', NULL, 1, 1, 'bMmZJ8kcqBh7PLneEK0Og2VMCjXWgjpoOzaPtUD1om6IV6iIKX5yR9YOJgIP', '2021-03-23 13:59:34', '2021-03-23 17:59:52', NULL),
+(2, 'Tyrel Bins', 'cecile.ondricka@example.com', '$2y$10$Jc/a8FCML7eVuZ7.RQAOKeoaK47VhhTCkF40NMCSVD86XnYc.eBeG', NULL, 1, 0, NULL, '2021-03-23 13:59:36', '2021-03-23 13:59:36', NULL),
+(3, 'Vicente Haag', 'mjacobson@example.net', '$2y$10$LNcRNCrbBlbOLCyjaGvmHewWOVkWeYgxwnuQ26WbDl/zOuUNPys6m', NULL, 1, 0, NULL, '2021-03-23 13:59:36', '2021-03-23 13:59:36', NULL),
+(4, 'Susana Schuppe', 'laila.willms@example.com', '$2y$10$DmlMLBt.R1kZJk4BYPoQh.3xbFmg33ImVKm16GQma8O6KW.GnCWWu', NULL, 1, 0, NULL, '2021-03-23 13:59:36', '2021-03-23 13:59:36', NULL),
+(5, 'Lysanne Waters', 'demario40@example.net', '$2y$10$qTlthhJrkQXqS4Nh09/BIOKJMpp62EO6lE3LJPlOwb.wmL5/3u7B2', NULL, 1, 0, NULL, '2021-03-23 13:59:36', '2021-03-23 13:59:36', NULL),
+(6, 'Mr. Jalen Jaskolski DDS', 'kcummings@example.net', '$2y$10$TIk1pP1cpRz/H78LzI1jXeRziVtlcrNQYai6va/SFamq6Vbak6qei', NULL, 1, 0, NULL, '2021-03-23 13:59:36', '2021-03-23 13:59:36', NULL),
+(7, 'Garnet Jacobs', 'zbrakus@example.com', '$2y$10$EkMdmUiVWSONew7yFWLcv.AX.R/x4LCpJr5yqP87OUjo7LNGS46Q6', NULL, 1, 0, NULL, '2021-03-23 13:59:37', '2021-03-23 13:59:37', NULL),
+(8, 'Camille Purdy', 'kovacek.angelina@example.net', '$2y$10$6AQzvECyIFRxbsZheB5F7eWRep3DpFmwdrzbwJjqZji2WD.QcGIye', NULL, 1, 0, NULL, '2021-03-23 13:59:37', '2021-03-23 13:59:37', NULL),
+(9, 'Cassidy Gottlieb DDS', 'metz.olaf@example.net', '$2y$10$97.mbjl7LW7ovkPwGNnqeubUBT/xH9MGq1yfTN6GuH5P4/pkG2vR6', NULL, 1, 0, NULL, '2021-03-23 13:59:37', '2021-03-23 13:59:37', NULL),
+(10, 'Dr. Lenora Bechtelar III', 'nbode@example.com', '$2y$10$6fCLTOnfTRSwZGdRkh0mZukvpXU.54sOPpa9UV8wNysdlb9.H3TyC', NULL, 1, 0, NULL, '2021-03-23 13:59:37', '2021-03-23 13:59:37', NULL),
+(11, 'Guy Ziemann', 'veda.berge@example.org', '$2y$10$l1u717sL5R2mXiLjeFxpe.gKx585SionPRwf4QbUq2RHuw3UZbDqe', NULL, 1, 0, NULL, '2021-03-23 13:59:37', '2021-03-23 13:59:37', NULL),
+(12, 'Prof. Elisa Tremblay PhD', 'walter.aric@example.org', '$2y$10$kUVmJldrj5g1SsY0G2bXuOstH2GOVXCo/kt7Q3Aku1DqjKQysKm/y', NULL, 1, 0, NULL, '2021-03-23 13:59:37', '2021-03-23 13:59:37', NULL),
+(13, 'Nella Marks', 'johnson.dannie@example.net', '$2y$10$38sxZKH/E9jEF8ws7A1ruuTnfcIQSxgKhWzLYKOZhqXrdblvIgw52', NULL, 1, 0, NULL, '2021-03-23 13:59:37', '2021-03-23 13:59:37', NULL),
+(14, 'Wilbert Considine', 'heaney.isabelle@example.org', '$2y$10$JDT7DXWAwHDo4YEHiabOLeh9GogmX./wFWvF856Oxn4aZkD21/naq', NULL, 1, 0, NULL, '2021-03-23 13:59:38', '2021-03-23 13:59:38', NULL),
+(15, 'Mariano Boehm', 'evert.buckridge@example.net', '$2y$10$RrYeWkVcQokfkl4DUvjh4.Clp4JEm/S1m6xUCq0MkzHJBE/aHFyyW', NULL, 1, 0, NULL, '2021-03-23 13:59:38', '2021-03-23 13:59:38', NULL),
+(16, 'Lula Schumm', 'greenholt.sophie@example.net', '$2y$10$O2Bzc1lW/idhIhzCV6HAX.pJyQIsy8t.8bInjiTTvt3NZzKTSITh2', NULL, 1, 0, NULL, '2021-03-23 13:59:38', '2021-03-23 13:59:38', NULL),
+(17, 'Miss Nikita Gutkowski', 'kiarra.reinger@example.com', '$2y$10$XI7Nhip3w4H7cEfqJwvMYebUJGCk3C.2vymyLFKnO7o7pk0RjLDay', NULL, 1, 0, NULL, '2021-03-23 13:59:38', '2021-03-23 13:59:38', NULL),
+(18, 'Greta Cole', 'jacobi.margarita@example.net', '$2y$10$8XwBTmkf5nmObgD5kn2ayODUOLjtg2h2rjd1lPgZRNP.C1QhND/Ve', NULL, 1, 0, NULL, '2021-03-23 13:59:38', '2021-03-23 13:59:38', NULL),
+(19, 'Thalia Auer', 'bernier.gerardo@example.com', '$2y$10$LjXmbmr6A348JvcQno9.4OwGCrmoKdpQ..hAFRyjBIvOdzHeqVzR6', NULL, 1, 0, NULL, '2021-03-23 13:59:38', '2021-03-23 13:59:38', NULL),
+(20, 'Mrs. Aliya Yundt', 'annamarie17@example.org', '$2y$10$Kk/Zmaw057QeCmAXi34FAef7gGlmq3fuwctoZleLNqYikIWPo8uyS', NULL, 1, 0, NULL, '2021-03-23 13:59:38', '2021-03-23 13:59:38', NULL),
+(21, 'Keely Little', 'carole.kulas@example.org', '$2y$10$k.ZYHmUljxPQ9Zm79CEIu.wq1mp09seCsPpcA7NarHJDdDpJqIp8.', NULL, 1, 0, NULL, '2021-03-23 13:59:39', '2021-03-23 13:59:39', NULL),
+(22, 'Prof. Milton Barton II', 'katelin.stoltenberg@example.net', '$2y$10$MXWgwqiTxXDjZxyg9FU3IeHX5Nla8D90rz.ZR3jlboIgSX4tuDQga', NULL, 1, 0, NULL, '2021-03-23 13:59:39', '2021-03-23 13:59:39', NULL),
+(23, 'Miss Kailey Prosacco', 'alexander.miller@example.org', '$2y$10$5ibvMy8JyIM625bY/pkNBOGcxKus//NeK/TU5Y8kTS3eXBD7.2ZQW', NULL, 1, 0, NULL, '2021-03-23 13:59:39', '2021-03-23 13:59:39', NULL),
+(24, 'Marshall Kutch IV', 'ihalvorson@example.org', '$2y$10$sFx2J0hpqjI2TVsxVGbIUuRgUX7LXxH2w84SFiKy0roPAk/L2MseK', NULL, 1, 0, NULL, '2021-03-23 13:59:39', '2021-03-23 13:59:39', NULL),
+(25, 'Jed Altenwerth', 'istark@example.com', '$2y$10$G4ygwgPDLy3QyxUSjBNEwuaaxO45gjexwJdvc3np6lOVovYQIwWKu', NULL, 1, 0, NULL, '2021-03-23 13:59:39', '2021-03-23 13:59:39', NULL),
+(26, 'Immanuel Murray', 'eritchie@example.org', '$2y$10$wkgo7Pae25NTUdGClfpo6OAilRqbBrKyvhmwzLKEQx2GCuxNVAZ8C', NULL, 1, 0, NULL, '2021-03-23 13:59:39', '2021-03-23 13:59:39', NULL),
+(27, 'Rodolfo Cummerata', 'german.russel@example.org', '$2y$10$djx2NcpXap4PfBzxcEBq6uuUrPOOXlFu7MPeAPoa6CnuReOaUj7x6', NULL, 1, 0, NULL, '2021-03-23 13:59:39', '2021-03-23 13:59:39', NULL),
+(28, 'Dr. Tyshawn Haley', 'wgleichner@example.com', '$2y$10$JsD.VfNpsoXg8GRnxdUvOu/Fbieaxt9wvVvSGzdyjCk42niQghmc.', NULL, 1, 0, NULL, '2021-03-23 13:59:39', '2021-03-23 13:59:39', NULL),
+(29, 'Dr. Ali Strosin', 'bwhite@example.net', '$2y$10$bfoTbTLxbrarplzaQyDA8uWTbSiLRoNYWlp/cwWQyQ/65W0BuhXDa', NULL, 1, 0, NULL, '2021-03-23 13:59:40', '2021-03-23 13:59:40', NULL),
+(30, 'Raleigh Rolfson', 'claire.glover@example.org', '$2y$10$JDI7ByPhgTuwbocio527Bek3GFNMthomsZzPjnGObx4y5CzORzQfi', NULL, 1, 0, NULL, '2021-03-23 13:59:40', '2021-03-23 13:59:40', NULL),
+(31, 'Gerard D\'Amore Jr.', 'luciano.johnson@example.net', '$2y$10$qKGM4B2XV9qn9qDWlRShSuRwsHTxjNjlYPWHwRBLTIbbvbLJSgjPq', NULL, 1, 0, NULL, '2021-03-23 13:59:40', '2021-03-23 13:59:40', NULL),
+(32, 'Arjun Smitham', 'raegan36@example.net', '$2y$10$ZNnmsKohcy2MVo38ey8vs.vTCN6/.dOjM.A92MWEpN2p/JQFP3/fq', NULL, 1, 0, NULL, '2021-03-23 13:59:40', '2021-03-23 13:59:40', NULL),
+(33, 'Prof. Heath O\'Conner', 'jvonrueden@example.org', '$2y$10$Yt7fxNV58KF.WwOGbLKJa.fmvtO7YZBsYP6T6d2JlDZZPMikGrfAK', NULL, 1, 0, NULL, '2021-03-23 13:59:40', '2021-03-23 13:59:40', NULL),
+(34, 'Vernon Stokes', 'jack.shields@example.org', '$2y$10$P5DuJSqGNbHtFylPdN7xeOAvQhaCz1CJBruWvWZGda727idyGLw2y', NULL, 1, 0, NULL, '2021-03-23 13:59:40', '2021-03-23 13:59:40', NULL),
+(35, 'Prof. Ramiro Beier', 'toby19@example.net', '$2y$10$FYa8umTwRO8PVGkJkAbYheo1D5YLdbchdo/F1G/E/6XDykakYBGke', NULL, 1, 0, NULL, '2021-03-23 13:59:40', '2021-03-23 13:59:40', NULL),
+(36, 'Gianni Stroman', 'breanna17@example.net', '$2y$10$AZAls3A4cfC0SVVi7VAd.e5dlZx4b2q4y6JGCpKaTF1yhvdMUo/g6', NULL, 1, 0, NULL, '2021-03-23 13:59:41', '2021-03-23 13:59:41', NULL),
+(37, 'Peyton Armstrong', 'wpfannerstill@example.org', '$2y$10$HUE0CQo1WDfzbxACDC7NXeirJTgbh9465kGSCvZpjDAH2EKfpKlki', NULL, 1, 0, NULL, '2021-03-23 13:59:41', '2021-03-23 13:59:41', NULL),
+(38, 'Dr. Marcelino Thompson', 'jkiehn@example.com', '$2y$10$KsuSgDn29Zz4yD1NYk8VMuwVY0lXCZhywRyPeHrHdHyFJPJQNlxMG', NULL, 1, 0, NULL, '2021-03-23 13:59:41', '2021-03-23 13:59:41', NULL),
+(39, 'Wade Stamm', 'evans16@example.net', '$2y$10$3uYdXTvX986VMTS/qqbVbevQnEIObOcnlRmSSQo8e3aPc6FAX7k6O', NULL, 1, 0, NULL, '2021-03-23 13:59:41', '2021-03-23 13:59:41', NULL),
+(40, 'Myrtice Stracke', 'ryder.dietrich@example.com', '$2y$10$iMTBrwE3rXTq9qBFyt1V6OvhNG0EM76HFf0w6RDbUTMBOj4V4vVSG', NULL, 1, 0, NULL, '2021-03-23 13:59:41', '2021-03-23 13:59:41', NULL),
+(41, 'Octavia Kshlerin Jr.', 'ardella32@example.com', '$2y$10$aap289FbK0hlLfW2WUD/ruKa/HiyPPF5os1qxB5ua8V.i9pGjbx5K', NULL, 1, 0, NULL, '2021-03-23 13:59:41', '2021-03-23 13:59:41', NULL),
+(42, 'Mrs. Emmalee Kuhn', 'abode@example.net', '$2y$10$o5kMm.PIiplSJcot0PMnrOmbhx2uLzHP2l7f25/eEbnrBVbZa1po6', NULL, 1, 0, NULL, '2021-03-23 13:59:41', '2021-03-23 13:59:41', NULL),
+(43, 'Annette Schinner', 'fhuel@example.org', '$2y$10$8.1VwYnuRrzwuMPhnWjMHO7p.CZWn74Mnt3xgb.FkFRyymnJ3GCpa', NULL, 1, 0, NULL, '2021-03-23 13:59:42', '2021-03-23 13:59:42', NULL),
+(44, 'Oswald Klein V', 'alexanne.cole@example.com', '$2y$10$X6pHHNegEl0.QVCl0kgTlur4BnRWf88vBVCmvfYVZYpGcuak8iVIm', NULL, 1, 0, NULL, '2021-03-23 13:59:42', '2021-03-23 13:59:42', NULL),
+(45, 'Verlie Witting', 'randall.hermann@example.org', '$2y$10$uchflTfjYnXi9kA022RhROy/OfO2YPp4xwz2LJJ/MFLKCrVu6UMrm', NULL, 1, 0, NULL, '2021-03-23 13:59:42', '2021-03-23 13:59:42', NULL),
+(46, 'Edmond Leuschke I', 'alize57@example.net', '$2y$10$7HtS2ExssaBb.FgcBIF.Dea9v3bG0.AYdxYOpYIudifoMu8YZ95B6', NULL, 1, 0, NULL, '2021-03-23 13:59:42', '2021-03-23 13:59:42', NULL),
+(47, 'Clarabelle Torp', 'zander66@example.net', '$2y$10$.SaR4S05D4AmPqNJELvSZ.HwE3F6P8suzhrGzCEAvYwQdqXXZUPAi', NULL, 1, 0, NULL, '2021-03-23 13:59:42', '2021-03-23 13:59:42', NULL),
+(48, 'Marion Hodkiewicz', 'rgleason@example.com', '$2y$10$N7CZd25CQILC/Ckqd5Wgsutbs2to/HNRwgYv4UCphmwJ7jbVRaeh.', NULL, 1, 0, NULL, '2021-03-23 13:59:42', '2021-03-23 13:59:42', NULL),
+(49, 'Dessie Pouros', 'tre65@example.com', '$2y$10$/nRosLkoPOKdpKTw3mQmVOC0WaVajV/82JL9x9aCn1p2C1kMc3e5a', NULL, 1, 0, NULL, '2021-03-23 13:59:42', '2021-03-23 13:59:42', NULL),
+(50, 'Noel Dietrich', 'marilyne.goyette@example.net', '$2y$10$YirXq03a.pIGXECppUTfNugmGwmfcQAN7TiBQlzNh7.Lb.fsXagjW', NULL, 1, 0, NULL, '2021-03-23 13:59:42', '2021-03-23 13:59:42', NULL),
+(51, 'Miss Etha Swaniawski', 'watson.upton@example.net', '$2y$10$mQfu2y/h2yqy9rMLrgdrs.pMnLl/4TpPqsTNI.MeUTKK4jsZpGzNe', NULL, 1, 0, NULL, '2021-03-23 13:59:43', '2021-03-23 13:59:43', NULL);
 
 -- --------------------------------------------------------
 
@@ -395,7 +444,7 @@ ALTER TABLE `kategori_urun`
 -- AUTO_INCREMENT for table `kullanici`
 --
 ALTER TABLE `kullanici`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `migrations`

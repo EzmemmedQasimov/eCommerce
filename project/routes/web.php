@@ -17,6 +17,14 @@ Route::group(['prefix'=>'yonetim'], function (){
     Route::get('/oturumukapat',[App\Http\Controllers\Yonetim\KullaniciController::class,'oturumukapat'])->name('yonetim.oturumukapat');
     Route::group(['middleware'=>'yonetim'],function () {
         Route::get('/anasayfa', [App\Http\Controllers\Yonetim\AnasayfaController::class, 'index'])->name('yonetim.anasayfa');
+
+        Route::group(['prefix' => 'kullanici'], function () {
+            Route::match(['get', 'post'], '/', [App\Http\Controllers\Yonetim\KullaniciController::class,'index'])->name('yonetim.kullanici');
+            Route::get('/yeni', [App\Http\Controllers\Yonetim\KullaniciController::class,'form'])->name('yonetim.kullanici.yeni');
+            Route::get('/duzenle/{id}', [App\Http\Controllers\Yonetim\KullaniciController::class,'form'])->name('yonetim.kullanici.duzenle');
+            Route::post('/kaydet/{id?}', [App\Http\Controllers\Yonetim\KullaniciController::class,'kaydet'])->name('yonetim.kullanici.kaydet');
+            Route::get('/sil/{id}', [App\Http\Controllers\Yonetim\KullaniciController::class,'sil'])->name('yonetim.kullanici.sil');
+        });
     });
 });
 
