@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,6 +11,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['prefix'=>'yonetim'], function (){
+    Route::redirect('/','/yonetim/oturumac');
+    Route::match(['get','post'],'/oturumac',[App\Http\Controllers\Yonetim\KullaniciController::class,'oturumac'])->name('yonetim.oturumac');
+    Route::get('/oturumukapat',[App\Http\Controllers\Yonetim\KullaniciController::class,'oturumukapat'])->name('yonetim.oturumukapat');
+    Route::group(['middleware'=>'yonetim'],function () {
+        Route::get('/anasayfa', [App\Http\Controllers\Yonetim\AnasayfaController::class, 'index'])->name('yonetim.anasayfa');
+    });
+});
+
 
 Route::get('/',[App\Http\Controllers\AnasayfaController::class, 'index'])->name('anasayfa');
 Route::get('/kategori/{slug_kategoriadi}',[App\Http\Controllers\KategoriController::class, 'index'])->name('kategori');

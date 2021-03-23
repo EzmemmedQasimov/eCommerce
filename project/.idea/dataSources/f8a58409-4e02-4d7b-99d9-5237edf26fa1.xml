@@ -1258,353 +1258,358 @@
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="380" parent="340" name="remember_token">
+    <column id="380" parent="340" name="yonetici_mi">
       <Position>7</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="381" parent="340" name="remember_token">
+      <Position>8</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <column id="381" parent="340" name="olusturulma_tarihi">
-      <Position>8</Position>
+    <column id="382" parent="340" name="olusturulma_tarihi">
+      <Position>9</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>current_timestamp()</DefaultExpression>
     </column>
-    <column id="382" parent="340" name="guncelleme_tarihi">
-      <Position>9</Position>
+    <column id="383" parent="340" name="guncelleme_tarihi">
+      <Position>10</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <OnUpdate>current_timestamp()</OnUpdate>
     </column>
-    <column id="383" parent="340" name="silinme_tarihi">
-      <Position>10</Position>
+    <column id="384" parent="340" name="silinme_tarihi">
+      <Position>11</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <index id="384" parent="340" name="kullanici_email_unique">
+    <index id="385" parent="340" name="kullanici_email_unique">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="385" parent="340" name="PRIMARY">
+    <key id="386" parent="340" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="386" parent="340" name="kullanici_email_unique">
+    <key id="387" parent="340" name="kullanici_email_unique">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>kullanici_email_unique</UnderlyingIndexName>
     </key>
-    <column id="387" parent="341" name="id">
+    <column id="388" parent="341" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="388" parent="341" name="migration">
+    <column id="389" parent="341" name="migration">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="389" parent="341" name="batch">
+    <column id="390" parent="341" name="batch">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="390" parent="341" name="PRIMARY">
+    <key id="391" parent="341" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="391" parent="342" name="email">
+    <column id="392" parent="342" name="email">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="392" parent="342" name="token">
+    <column id="393" parent="342" name="token">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="393" parent="342" name="created_at">
+    <column id="394" parent="342" name="created_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <index id="394" parent="342" name="password_resets_email_index">
+    <index id="395" parent="342" name="password_resets_email_index">
       <ColNames>email</ColNames>
       <Type>btree</Type>
     </index>
-    <column id="395" parent="343" name="id">
+    <column id="396" parent="343" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="396" parent="343" name="kullanici_id">
+    <column id="397" parent="343" name="kullanici_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="397" parent="343" name="olusturulma_tarihi">
+    <column id="398" parent="343" name="olusturulma_tarihi">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>current_timestamp()</DefaultExpression>
     </column>
-    <column id="398" parent="343" name="guncelleme_tarihi">
+    <column id="399" parent="343" name="guncelleme_tarihi">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <OnUpdate>current_timestamp()</OnUpdate>
     </column>
-    <column id="399" parent="343" name="silinme_tarihi">
+    <column id="400" parent="343" name="silinme_tarihi">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <index id="400" parent="343" name="sepet_kullanici_id_foreign">
+    <index id="401" parent="343" name="sepet_kullanici_id_foreign">
       <ColNames>kullanici_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="401" parent="343" name="PRIMARY">
+    <key id="402" parent="343" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="402" parent="343" name="sepet_kullanici_id_foreign">
+    <foreign-key id="403" parent="343" name="sepet_kullanici_id_foreign">
       <ColNames>kullanici_id</ColNames>
       <RefTableName>kullanici</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="403" parent="344" name="id">
+    <column id="404" parent="344" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="404" parent="344" name="sepet_id">
+    <column id="405" parent="344" name="sepet_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="405" parent="344" name="urun_id">
+    <column id="406" parent="344" name="urun_id">
       <Position>3</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="406" parent="344" name="adet">
+    <column id="407" parent="344" name="adet">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="407" parent="344" name="fiyati">
+    <column id="408" parent="344" name="fiyati">
       <Position>5</Position>
       <DataType>decimal(5,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="408" parent="344" name="durum">
+    <column id="409" parent="344" name="durum">
       <Position>6</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="409" parent="344" name="olusturma_tarihi">
+    <column id="410" parent="344" name="olusturma_tarihi">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>current_timestamp()</DefaultExpression>
     </column>
-    <column id="410" parent="344" name="guncelleme_tarihi">
+    <column id="411" parent="344" name="guncelleme_tarihi">
       <Position>8</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <OnUpdate>current_timestamp()</OnUpdate>
     </column>
-    <column id="411" parent="344" name="silinme_tarihi">
+    <column id="412" parent="344" name="silinme_tarihi">
       <Position>9</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <index id="412" parent="344" name="sepet_urun_sepet_id_foreign">
+    <index id="413" parent="344" name="sepet_urun_sepet_id_foreign">
       <ColNames>sepet_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="413" parent="344" name="sepet_urun_urun_id_foreign">
+    <index id="414" parent="344" name="sepet_urun_urun_id_foreign">
       <ColNames>urun_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="414" parent="344" name="PRIMARY">
+    <key id="415" parent="344" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="415" parent="344" name="sepet_urun_sepet_id_foreign">
+    <foreign-key id="416" parent="344" name="sepet_urun_sepet_id_foreign">
       <ColNames>sepet_id</ColNames>
       <RefTableName>sepet</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="416" parent="344" name="sepet_urun_urun_id_foreign">
+    <foreign-key id="417" parent="344" name="sepet_urun_urun_id_foreign">
       <ColNames>urun_id</ColNames>
       <RefTableName>urun</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="417" parent="345" name="id">
+    <column id="418" parent="345" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="418" parent="345" name="slug">
+    <column id="419" parent="345" name="slug">
       <Position>2</Position>
       <DataType>varchar(160)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="419" parent="345" name="urun_adi">
+    <column id="420" parent="345" name="urun_adi">
       <Position>3</Position>
       <DataType>varchar(150)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="420" parent="345" name="fiyati">
+    <column id="421" parent="345" name="fiyati">
       <Position>4</Position>
       <DataType>decimal(6,3 digit)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="421" parent="345" name="aciklama">
+    <column id="422" parent="345" name="aciklama">
       <Position>5</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="422" parent="345" name="olusturulma_tarihi">
+    <column id="423" parent="345" name="olusturulma_tarihi">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>current_timestamp()</DefaultExpression>
     </column>
-    <column id="423" parent="345" name="guncelleme_tarihi">
+    <column id="424" parent="345" name="guncelleme_tarihi">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <OnUpdate>current_timestamp()</OnUpdate>
     </column>
-    <column id="424" parent="345" name="silinme_tarihi">
+    <column id="425" parent="345" name="silinme_tarihi">
       <Position>8</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <key id="425" parent="345" name="PRIMARY">
+    <key id="426" parent="345" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="426" parent="346" name="id">
+    <column id="427" parent="346" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="427" parent="346" name="urun_id">
+    <column id="428" parent="346" name="urun_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="428" parent="346" name="goster_slider">
+    <column id="429" parent="346" name="goster_slider">
       <Position>3</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="429" parent="346" name="goster_gunun_firsati">
+    <column id="430" parent="346" name="goster_gunun_firsati">
       <Position>4</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="430" parent="346" name="goster_one_cikan">
+    <column id="431" parent="346" name="goster_one_cikan">
       <Position>5</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="431" parent="346" name="goster_cok_satan">
+    <column id="432" parent="346" name="goster_cok_satan">
       <Position>6</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="432" parent="346" name="goster_indirimli">
+    <column id="433" parent="346" name="goster_indirimli">
       <Position>7</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <index id="433" parent="346" name="urundetay_urun_id_unique">
+    <index id="434" parent="346" name="urundetay_urun_id_unique">
       <ColNames>urun_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="434" parent="346" name="PRIMARY">
+    <key id="435" parent="346" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="435" parent="346" name="urundetay_urun_id_unique">
+    <key id="436" parent="346" name="urundetay_urun_id_unique">
       <ColNames>urun_id</ColNames>
       <UnderlyingIndexName>urundetay_urun_id_unique</UnderlyingIndexName>
     </key>
-    <foreign-key id="436" parent="346" name="urundetay_urun_id_foreign">
+    <foreign-key id="437" parent="346" name="urundetay_urun_id_foreign">
       <ColNames>urun_id</ColNames>
       <RefTableName>urun</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="437" parent="347" name="id">
+    <column id="438" parent="347" name="id">
       <Position>1</Position>
       <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="438" parent="347" name="name">
+    <column id="439" parent="347" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="439" parent="347" name="email">
+    <column id="440" parent="347" name="email">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="440" parent="347" name="email_verified_at">
+    <column id="441" parent="347" name="email_verified_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <column id="441" parent="347" name="password">
+    <column id="442" parent="347" name="password">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="442" parent="347" name="remember_token">
+    <column id="443" parent="347" name="remember_token">
       <Position>6</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <column id="443" parent="347" name="created_at">
+    <column id="444" parent="347" name="created_at">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <column id="444" parent="347" name="updated_at">
+    <column id="445" parent="347" name="updated_at">
       <Position>8</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <index id="445" parent="347" name="users_email_unique">
+    <index id="446" parent="347" name="users_email_unique">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="446" parent="347" name="PRIMARY">
+    <key id="447" parent="347" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="447" parent="347" name="users_email_unique">
+    <key id="448" parent="347" name="users_email_unique">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
     </key>

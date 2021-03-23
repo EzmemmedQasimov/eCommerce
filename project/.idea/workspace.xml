@@ -5,23 +5,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="809203e2-9060-447d-ba27-5fd3b1a96af9" name="Default Changelist" comment="">
+    <list default="true" id="809203e2-9060-447d-ba27-5fd3b1a96af9" name="Default Changelist" comment="v7">
+      <change afterPath="$PROJECT_DIR$/resources/views/yonetim/anasayfa.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/yonetim/layouts/master.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/yonetim/layouts/partials/navbar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/yonetim/layouts/partials/sidebar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/yonetim/oturumac.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8a58409-4e02-4d7b-99d9-5237edf26fa1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8a58409-4e02-4d7b-99d9-5237edf26fa1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/KullaniciController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/KullaniciController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SepetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SepetController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UrunDetay.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UrunDetay.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/UrunTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UrunTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravelecommerce.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sepet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sepet.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/urun.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/urun.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_04_172737_create_kullanici_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_04_172737_create_kullanici_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,8 +181,22 @@
       <workItem from="1615559718205" duration="10579000" />
       <workItem from="1615657468523" duration="5188000" />
       <workItem from="1615748947714" duration="1605000" />
-      <workItem from="1615751826776" duration="5787000" />
+      <workItem from="1615751826776" duration="6477000" />
+      <workItem from="1615820249396" duration="1228000" />
+      <workItem from="1615833333788" duration="57000" />
+      <workItem from="1615834804368" duration="4274000" />
+      <workItem from="1616360084927" duration="967000" />
+      <workItem from="1616437455171" duration="7166000" />
+      <workItem from="1616505505406" duration="400000" />
     </task>
+    <task id="LOCAL-00001" summary="v7">
+      <created>1615757745440</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615757745440</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,25 +221,42 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="v7" />
+    <option name="LAST_COMMIT_MESSAGE" value="v7" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="21" width="693" height="686" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615054816043">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="21" width="693" height="686" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1615054816043" />
+    <state x="445" y="164" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615836082177">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="445" y="164" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1615836082177" />
     <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1615317587781">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1615317587781" />
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1615833390809">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1615833390809" />
     <state width="246" height="457" key="HiddenNamespacesPopup" timestamp="1615054845634">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="246" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1615054845634" />
-    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1615236905327">
+    <state x="478" y="85" key="NewPhpClassDialog" timestamp="1616442154192">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1615236905327" />
+    <state x="478" y="85" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1616442154192" />
+    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1616442128918">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1616442128918" />
+    <state x="526" y="135" width="485" height="457" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1615839048456">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="526" y="135" width="485" height="457" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1615839048456" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1615306909974">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
