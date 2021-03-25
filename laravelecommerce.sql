@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 23, 2021 at 07:17 PM
+-- Generation Time: Mar 25, 2021 at 09:31 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -66,7 +66,11 @@ INSERT INTO `kategori` (`id`, `ust_id`, `kategori_adi`, `slug`, `olusturulma_tar
 (6, 5, 'Çocuk', 'cocuk', '2021-03-08 18:27:33', '2021-03-08 18:27:33', NULL),
 (7, 5, 'Dünya', 'dunya', '2021-03-08 18:27:33', '2021-03-08 18:27:33', NULL),
 (8, NULL, 'Məişət', 'meiset', '2021-03-08 18:27:33', '2021-03-08 18:27:33', NULL),
-(9, NULL, 'Aksesuar', 'aksesuar', '2021-03-08 18:27:33', '2021-03-08 18:27:33', NULL);
+(9, NULL, 'Aksesuar', 'aksesuar', '2021-03-08 18:27:33', '2021-03-24 21:28:30', NULL),
+(10, NULL, 'Elektronik Alt kategorisi', 'elektronik-alt-kategori', '2021-03-24 14:51:24', '2021-03-24 21:28:30', NULL),
+(11, NULL, 'Elektronik Alt kategorisi', 'elektronik-alt-kategorisi', '2021-03-24 15:13:01', '2021-03-24 17:34:49', '2021-03-24 17:34:49'),
+(12, NULL, 'Elektronik Alt kategorisi1', 'elektronik-alt-kategorisi1', '2021-03-24 17:14:21', '2021-03-24 17:22:20', '2021-03-24 17:22:20'),
+(13, 2, 'Elektronik Alt kategorisi11', 'elektronik-alt-kategorisi11', '2021-03-25 13:45:05', '2021-03-25 13:45:05', NULL);
 
 -- --------------------------------------------------------
 
@@ -216,7 +220,9 @@ CREATE TABLE `sepet` (
 --
 
 INSERT INTO `sepet` (`id`, `kullanici_id`, `olusturulma_tarihi`, `guncelleme_tarihi`, `silinme_tarihi`) VALUES
-(6, 18, '2021-03-14 16:31:50', '2021-03-14 16:31:50', NULL);
+(6, 18, '2021-03-14 16:31:50', '2021-03-14 16:31:50', NULL),
+(8, 1, '2021-03-23 15:02:30', '2021-03-23 15:02:30', NULL),
+(9, 1, '2021-03-25 16:05:49', '2021-03-25 16:05:49', NULL);
 
 -- --------------------------------------------------------
 
@@ -241,7 +247,9 @@ CREATE TABLE `sepet_urun` (
 --
 
 INSERT INTO `sepet_urun` (`id`, `sepet_id`, `urun_id`, `adet`, `fiyati`, `durum`, `olusturma_tarihi`, `guncelleme_tarihi`, `silinme_tarihi`) VALUES
-(10, 6, 2, 4, '5.45', 'Beklemede', '2021-03-14 16:31:50', '2021-03-21 16:59:46', NULL);
+(10, 6, 2, 4, '5.45', 'Beklemede', '2021-03-14 16:31:50', '2021-03-21 16:59:46', NULL),
+(12, 9, 6, 2, '670.90', 'Beklemede', '2021-03-25 16:05:49', '2021-03-25 16:06:00', NULL),
+(13, 9, 5, 2, '590.90', 'Beklemede', '2021-03-25 16:06:11', '2021-03-25 16:06:15', NULL);
 
 -- --------------------------------------------------------
 
@@ -253,7 +261,7 @@ CREATE TABLE `urun` (
   `id` int(10) UNSIGNED NOT NULL,
   `slug` varchar(160) COLLATE utf8mb4_unicode_ci NOT NULL,
   `urun_adi` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `fiyati` decimal(6,3) NOT NULL,
+  `fiyati` decimal(10,3) NOT NULL,
   `aciklama` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `olusturulma_tarihi` timestamp NOT NULL DEFAULT current_timestamp(),
   `guncelleme_tarihi` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
@@ -265,10 +273,12 @@ CREATE TABLE `urun` (
 --
 
 INSERT INTO `urun` (`id`, `slug`, `urun_adi`, `fiyati`, `aciklama`, `olusturulma_tarihi`, `guncelleme_tarihi`, `silinme_tarihi`) VALUES
-(1, 'laravel-8-framework', 'Something', '3.210', 'Lorem Ipsum is simply dummy text of\n                the printing and typesetting industry. Lorem', '2021-03-12 14:36:59', '2021-03-12 14:36:59', NULL),
-(2, '1-laravel-8-framework', '1Something', '5.450', '1m typesettingIp sum is stypeset tingimply dummy text of\n                the prit ypesetting nting and  industry. Lorem', '2021-03-12 14:38:39', '2021-03-12 14:38:39', NULL),
-(3, '2-laravel-8-framework', '1Something', '6.630', '1m typesettingIp sum is stypeset tingimply dummy text of\n                the prit ypesetting nting and  industry. Lorem', '2021-03-12 14:39:55', '2021-03-12 14:39:55', NULL),
-(4, '3-laravel-8-framework', '1Something', '7.620', '1m typesettingIp sum is stypeset tingimply dummy text of\n                the prit ypesetting nting and  industry. Lorem', '2021-03-12 14:40:32', '2021-03-12 14:40:32', NULL);
+(1, 'laravel-8-framework', 'Something else', '5.334', 'Something else', '2021-03-12 14:36:59', '2021-03-25 14:17:08', NULL),
+(2, '1-laravel-8-framework', 'asdasdasdasd', '5.450', 'asdasdasdasd', '2021-03-12 14:38:39', '2021-03-25 16:01:08', '2021-03-25 16:01:08'),
+(3, 'lorem-ipsim-ipsum', 'Lorem ipsum', '444.680', 'Lorem ipsum Lorem ipsumLorem ipsum', '2021-03-12 14:39:55', '2021-03-25 16:03:33', '2021-03-25 16:03:33'),
+(4, '3-laravel-8-framework', '1Something', '7.620', '1m typesettingIp sum is stypeset tingimply dummy text of\n                the prit ypesetting nting and  industry. Lorem', '2021-03-12 14:40:32', '2021-03-25 16:01:17', '2021-03-25 16:01:17'),
+(5, 'telefon-samsung-galaxy-a51', 'Telefon Samsung Galaxy A51', '590.900', 'Telefon Samsung Galaxy A51', '2021-03-25 14:05:04', '2021-03-25 14:28:09', NULL),
+(6, 'telefon-samsung-galaxy-a71', 'Telefon Samsung Galaxy A71', '670.900', 'Samsung galaxy a71', '2021-03-25 15:47:56', '2021-03-25 15:47:56', NULL);
 
 -- --------------------------------------------------------
 
@@ -292,35 +302,10 @@ CREATE TABLE `urundetay` (
 
 INSERT INTO `urundetay` (`id`, `urun_id`, `goster_slider`, `goster_gunun_firsati`, `goster_one_cikan`, `goster_cok_satan`, `goster_indirimli`) VALUES
 (1, 1, 0, 0, 0, 0, 1),
-(2, 2, 1, 1, 0, 0, 1),
-(3, 3, 1, 0, 1, 0, 0),
+(3, 3, 1, 1, 1, 1, 1),
 (4, 4, 0, 0, 0, 0, 1),
-(5, 5, 0, 1, 1, 0, 0),
-(6, 6, 1, 0, 0, 1, 1),
-(7, 7, 0, 0, 1, 0, 0),
-(8, 8, 0, 1, 0, 0, 1),
-(9, 9, 1, 0, 1, 0, 1),
-(10, 10, 1, 0, 0, 1, 0),
-(11, 11, 0, 0, 0, 1, 0),
-(12, 12, 1, 0, 0, 0, 1),
-(13, 13, 0, 0, 1, 0, 0),
-(14, 14, 1, 0, 0, 0, 1),
-(15, 15, 1, 0, 1, 0, 1),
-(16, 16, 1, 1, 1, 1, 1),
-(17, 17, 0, 1, 1, 1, 0),
-(18, 18, 0, 1, 0, 1, 0),
-(19, 19, 0, 1, 1, 1, 0),
-(20, 20, 1, 1, 0, 0, 0),
-(21, 21, 0, 1, 1, 0, 1),
-(22, 22, 1, 1, 1, 1, 0),
-(23, 23, 1, 1, 0, 1, 0),
-(24, 24, 1, 1, 0, 1, 0),
-(25, 25, 1, 1, 1, 1, 1),
-(26, 26, 1, 1, 1, 1, 0),
-(27, 27, 0, 1, 0, 1, 1),
-(28, 28, 0, 1, 0, 0, 1),
-(29, 29, 0, 1, 1, 1, 1),
-(30, 30, 0, 0, 1, 0, 1);
+(5, 5, 1, 1, 1, 1, 1),
+(48, 6, 1, 1, 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -432,13 +417,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `kategori_urun`
 --
 ALTER TABLE `kategori_urun`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `kullanici`
@@ -456,25 +441,25 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `sepet`
 --
 ALTER TABLE `sepet`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `sepet_urun`
 --
 ALTER TABLE `sepet_urun`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `urun`
 --
 ALTER TABLE `urun`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `urundetay`
 --
 ALTER TABLE `urundetay`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `users`

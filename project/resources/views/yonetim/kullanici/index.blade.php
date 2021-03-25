@@ -53,7 +53,7 @@
                             <span class="label label-warning">Müşteri</span>
                         @endif
                     </td>
-                    <td>{{ $entry->olusturma_tarihi }}</td>
+                    <td>{{ $entry->olusturulma_tarihi }}</td>
                     <td style="width: 100px">
                         <a href="{{ route('yonetim.kullanici.duzenle', $entry->id) }}" class="btn btn-xs btn-success" data-toggle="tooltip" data-placement="top" title="Düzenle">
                             <span class="fa fa-pencil"></span>

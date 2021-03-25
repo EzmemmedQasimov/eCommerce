@@ -8,9 +8,10 @@ class UrunDetay extends Model
 {
     protected $table="urundetay";
     public $timestamps=false;
+    protected $guarded = [];
 
     public function urun()
     {
-        return $this->belongsTo('Urun');
+        return $this->belongsTo('urun');
     }
 }

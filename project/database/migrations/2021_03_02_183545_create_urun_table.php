@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -17,7 +18,7 @@ class CreateUrunTable extends Migration
             $table->increments('id');
             $table->string('slug',160);
             $table->string('urun_adi',150);
-            $table->decimal('fiyati',6,3);
+            $table->decimal('fiyati',10,3);
             $table->text('aciklama');
             $table->timestamp('olusturulma_tarihi')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('guncelleme_tarihi')->default(DB::raw('CURRENT_TIMESTAMP on Update

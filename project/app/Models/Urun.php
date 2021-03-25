@@ -21,6 +21,6 @@ class Urun extends Model
 
     public function detay()
     {
-        return $this->hasOne('App\Models\UrunDetay');
+        return $this->hasOne('App\Models\UrunDetay')->withDefault();
     }
 }
