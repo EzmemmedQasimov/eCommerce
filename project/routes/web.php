@@ -81,5 +81,9 @@ Route::get('test/mail',function (){
     return new App\Mail\KullaniciKayitMail();
 });
 
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'yonetim']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+
 
 

@@ -15,7 +15,7 @@ class AnasayfaController extends Controller
             ->join('urundetay','urundetay.urun_id','urun.id')
             ->where('urundetay.goster_gunun_firsati',1)
             ->orderBy('guncelleme_tarihi','desc')
-            ->take(5)
+            ->take(get_ayar('anasayfa_slider_urun_adet'))
             ->get();
 
         $urun_gunun_firsati = Urun::select('urun.*')
@@ -27,7 +27,7 @@ class AnasayfaController extends Controller
             ->join('urundetay','urundetay.urun_id','urun.id')
             ->where('urundetay.goster_gunun_firsati',1)
             ->orderBy('guncelleme_tarihi','desc')
-            ->take(4)
+            ->take(get_ayar('anasayfa_liste_urun_adet'))
             ->get();
 
         $urun_indirimli = Urun::select('urun.*')

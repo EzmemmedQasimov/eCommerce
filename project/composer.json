@@ -17,6 +17,7 @@
         "laravel/framework": "^8.12",
         "laravel/helpers": "^1.4",
         "laravel/tinker": "^2.5",
+        "unisharp/laravel-filemanager": "^2.2",
         "uxweb/sweet-alert": "^2.0"
     },
     "require-dev": {
@@ -38,6 +39,9 @@
         }
     },
     "autoload": {
+        "files": [
+            "app/helpers.php"
+        ],
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",

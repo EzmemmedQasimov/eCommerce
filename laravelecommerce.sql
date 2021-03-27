@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2021 at 09:31 PM
+-- Generation Time: Mar 27, 2021 at 09:36 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `laravelecommerce`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ayar`
+--
+
+CREATE TABLE `ayar` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `anahtar` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deger` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `ayar`
+--
+
+INSERT INTO `ayar` (`id`, `anahtar`, `deger`) VALUES
+(1, 'anasayfa_slider_urun_adet', '3'),
+(2, 'anasayfa_liste_urun_adet', '6');
 
 -- --------------------------------------------------------
 
@@ -84,6 +104,16 @@ CREATE TABLE `kategori_urun` (
   `urun_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `kategori_urun`
+--
+
+INSERT INTO `kategori_urun` (`id`, `kategori_id`, `urun_id`) VALUES
+(9, 1, 8),
+(10, 3, 8),
+(13, 1, 10),
+(14, 3, 10);
+
 -- --------------------------------------------------------
 
 --
@@ -109,17 +139,17 @@ CREATE TABLE `kullanici` (
 --
 
 INSERT INTO `kullanici` (`id`, `adsoyad`, `email`, `sifre`, `aktivasyon_anahtari`, `aktif_mi`, `yonetici_mi`, `remember_token`, `olusturulma_tarihi`, `guncelleme_tarihi`, `silinme_tarihi`) VALUES
-(1, 'Əzməmməd Qasımov', 'ezmemmed@yahoo.com', '$2y$10$AQASU.R2UHh9u1.ckOhXyeGuS0XThE0NwpxOu4m3sIJctKbl7jMiy', NULL, 1, 1, 'bMmZJ8kcqBh7PLneEK0Og2VMCjXWgjpoOzaPtUD1om6IV6iIKX5yR9YOJgIP', '2021-03-23 13:59:34', '2021-03-23 17:59:52', NULL),
-(2, 'Tyrel Bins', 'cecile.ondricka@example.com', '$2y$10$Jc/a8FCML7eVuZ7.RQAOKeoaK47VhhTCkF40NMCSVD86XnYc.eBeG', NULL, 1, 0, NULL, '2021-03-23 13:59:36', '2021-03-23 13:59:36', NULL),
-(3, 'Vicente Haag', 'mjacobson@example.net', '$2y$10$LNcRNCrbBlbOLCyjaGvmHewWOVkWeYgxwnuQ26WbDl/zOuUNPys6m', NULL, 1, 0, NULL, '2021-03-23 13:59:36', '2021-03-23 13:59:36', NULL),
-(4, 'Susana Schuppe', 'laila.willms@example.com', '$2y$10$DmlMLBt.R1kZJk4BYPoQh.3xbFmg33ImVKm16GQma8O6KW.GnCWWu', NULL, 1, 0, NULL, '2021-03-23 13:59:36', '2021-03-23 13:59:36', NULL),
+(1, 'Əzməmməd Qasımov', 'ezmemmed@yahoo.com', '$2y$10$0e3rNGMLejMTHJ1iY5pfbe/zEL9MU7MnfhN1608Lhsb4s8YlZDqbm', NULL, 1, 1, '5wN8Bl7k6aBgNzqtlkHgKeHZ9Hr1JGR77mIQoGbsppplUHBNUwJ5YK0tYitm', '2021-03-23 13:59:34', '2021-03-27 20:13:21', NULL),
+(2, 'Tyrel Bins', 'cecile.ondricka@example.com', '$2y$10$Jc/a8FCML7eVuZ7.RQAOKeoaK47VhhTCkF40NMCSVD86XnYc.eBeG', NULL, 1, 0, NULL, '2021-03-23 13:59:36', '2021-03-27 13:57:09', '2021-03-27 13:57:09'),
+(3, 'Vicente Haag', 'mjacobson@example.net', '$2y$10$LNcRNCrbBlbOLCyjaGvmHewWOVkWeYgxwnuQ26WbDl/zOuUNPys6m', NULL, 1, 0, NULL, '2021-03-23 13:59:36', '2021-03-27 14:11:40', '2021-03-27 14:11:40'),
+(4, 'Susana Schuppe', 'laila.willms@example.com', '$2y$10$DmlMLBt.R1kZJk4BYPoQh.3xbFmg33ImVKm16GQma8O6KW.GnCWWu', NULL, 1, 0, NULL, '2021-03-23 13:59:36', '2021-03-27 14:11:56', '2021-03-27 14:11:56'),
 (5, 'Lysanne Waters', 'demario40@example.net', '$2y$10$qTlthhJrkQXqS4Nh09/BIOKJMpp62EO6lE3LJPlOwb.wmL5/3u7B2', NULL, 1, 0, NULL, '2021-03-23 13:59:36', '2021-03-23 13:59:36', NULL),
 (6, 'Mr. Jalen Jaskolski DDS', 'kcummings@example.net', '$2y$10$TIk1pP1cpRz/H78LzI1jXeRziVtlcrNQYai6va/SFamq6Vbak6qei', NULL, 1, 0, NULL, '2021-03-23 13:59:36', '2021-03-23 13:59:36', NULL),
 (7, 'Garnet Jacobs', 'zbrakus@example.com', '$2y$10$EkMdmUiVWSONew7yFWLcv.AX.R/x4LCpJr5yqP87OUjo7LNGS46Q6', NULL, 1, 0, NULL, '2021-03-23 13:59:37', '2021-03-23 13:59:37', NULL),
 (8, 'Camille Purdy', 'kovacek.angelina@example.net', '$2y$10$6AQzvECyIFRxbsZheB5F7eWRep3DpFmwdrzbwJjqZji2WD.QcGIye', NULL, 1, 0, NULL, '2021-03-23 13:59:37', '2021-03-23 13:59:37', NULL),
 (9, 'Cassidy Gottlieb DDS', 'metz.olaf@example.net', '$2y$10$97.mbjl7LW7ovkPwGNnqeubUBT/xH9MGq1yfTN6GuH5P4/pkG2vR6', NULL, 1, 0, NULL, '2021-03-23 13:59:37', '2021-03-23 13:59:37', NULL),
 (10, 'Dr. Lenora Bechtelar III', 'nbode@example.com', '$2y$10$6fCLTOnfTRSwZGdRkh0mZukvpXU.54sOPpa9UV8wNysdlb9.H3TyC', NULL, 1, 0, NULL, '2021-03-23 13:59:37', '2021-03-23 13:59:37', NULL),
-(11, 'Guy Ziemann', 'veda.berge@example.org', '$2y$10$l1u717sL5R2mXiLjeFxpe.gKx585SionPRwf4QbUq2RHuw3UZbDqe', NULL, 1, 0, NULL, '2021-03-23 13:59:37', '2021-03-23 13:59:37', NULL),
+(11, 'Guy Ziemann', 'veda.berge@example.org', '$2y$10$l1u717sL5R2mXiLjeFxpe.gKx585SionPRwf4QbUq2RHuw3UZbDqe', NULL, 1, 0, NULL, '2021-03-23 13:59:37', '2021-03-27 13:58:05', '2021-03-27 13:58:05'),
 (12, 'Prof. Elisa Tremblay PhD', 'walter.aric@example.org', '$2y$10$kUVmJldrj5g1SsY0G2bXuOstH2GOVXCo/kt7Q3Aku1DqjKQysKm/y', NULL, 1, 0, NULL, '2021-03-23 13:59:37', '2021-03-23 13:59:37', NULL),
 (13, 'Nella Marks', 'johnson.dannie@example.net', '$2y$10$38sxZKH/E9jEF8ws7A1ruuTnfcIQSxgKhWzLYKOZhqXrdblvIgw52', NULL, 1, 0, NULL, '2021-03-23 13:59:37', '2021-03-23 13:59:37', NULL),
 (14, 'Wilbert Considine', 'heaney.isabelle@example.org', '$2y$10$JDT7DXWAwHDo4YEHiabOLeh9GogmX./wFWvF856Oxn4aZkD21/naq', NULL, 1, 0, NULL, '2021-03-23 13:59:38', '2021-03-23 13:59:38', NULL),
@@ -159,7 +189,8 @@ INSERT INTO `kullanici` (`id`, `adsoyad`, `email`, `sifre`, `aktivasyon_anahtari
 (48, 'Marion Hodkiewicz', 'rgleason@example.com', '$2y$10$N7CZd25CQILC/Ckqd5Wgsutbs2to/HNRwgYv4UCphmwJ7jbVRaeh.', NULL, 1, 0, NULL, '2021-03-23 13:59:42', '2021-03-23 13:59:42', NULL),
 (49, 'Dessie Pouros', 'tre65@example.com', '$2y$10$/nRosLkoPOKdpKTw3mQmVOC0WaVajV/82JL9x9aCn1p2C1kMc3e5a', NULL, 1, 0, NULL, '2021-03-23 13:59:42', '2021-03-23 13:59:42', NULL),
 (50, 'Noel Dietrich', 'marilyne.goyette@example.net', '$2y$10$YirXq03a.pIGXECppUTfNugmGwmfcQAN7TiBQlzNh7.Lb.fsXagjW', NULL, 1, 0, NULL, '2021-03-23 13:59:42', '2021-03-23 13:59:42', NULL),
-(51, 'Miss Etha Swaniawski', 'watson.upton@example.net', '$2y$10$mQfu2y/h2yqy9rMLrgdrs.pMnLl/4TpPqsTNI.MeUTKK4jsZpGzNe', NULL, 1, 0, NULL, '2021-03-23 13:59:43', '2021-03-23 13:59:43', NULL);
+(51, 'Miss Etha Swaniawski', 'watson.upton@example.net', '$2y$10$mQfu2y/h2yqy9rMLrgdrs.pMnLl/4TpPqsTNI.MeUTKK4jsZpGzNe', NULL, 1, 0, NULL, '2021-03-23 13:59:43', '2021-03-23 13:59:43', NULL),
+(52, 'Nihat Novruzov', 'nihat@gmail.com', '$2y$10$at9Tpwwj4nytqqL3aQnVZeBK.5zEAZT9Y9cFggi2qL03FEyGTFQ9S', NULL, 1, 1, 'hjnjGA4tCaJaj8B7HZRnQEcQMETFcYOKqPOMdETJf9acMn610UBroMmoEF7r', '2021-03-27 13:50:11', '2021-03-27 17:50:48', NULL);
 
 -- --------------------------------------------------------
 
@@ -187,7 +218,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (23, '2021_03_03_185430_create_urun_detay_table', 1),
 (24, '2021_03_04_172737_create_kullanici_table', 1),
 (25, '2021_03_09_190056_create_sepet_table', 2),
-(26, '2021_03_09_191456_create_sepet_urun_table', 3);
+(26, '2021_03_09_191456_create_sepet_urun_table', 3),
+(27, '2021_03_27_190458_create_ayar_table', 4);
 
 -- --------------------------------------------------------
 
@@ -249,7 +281,10 @@ CREATE TABLE `sepet_urun` (
 INSERT INTO `sepet_urun` (`id`, `sepet_id`, `urun_id`, `adet`, `fiyati`, `durum`, `olusturma_tarihi`, `guncelleme_tarihi`, `silinme_tarihi`) VALUES
 (10, 6, 2, 4, '5.45', 'Beklemede', '2021-03-14 16:31:50', '2021-03-21 16:59:46', NULL),
 (12, 9, 6, 2, '670.90', 'Beklemede', '2021-03-25 16:05:49', '2021-03-25 16:06:00', NULL),
-(13, 9, 5, 2, '590.90', 'Beklemede', '2021-03-25 16:06:11', '2021-03-25 16:06:15', NULL);
+(13, 9, 5, 2, '590.90', 'Beklemede', '2021-03-25 16:06:11', '2021-03-25 16:06:15', NULL),
+(14, 8, 10, 3, '290.00', 'Beklemede', '2021-03-27 13:45:40', '2021-03-27 13:47:11', '2021-03-27 13:47:11'),
+(15, 8, 9, 1, '290.00', 'Beklemede', '2021-03-27 13:45:57', '2021-03-27 13:47:17', '2021-03-27 13:47:17'),
+(16, 8, 10, 1, '290.00', 'Beklemede', '2021-03-27 16:12:47', '2021-03-27 16:12:47', NULL);
 
 -- --------------------------------------------------------
 
@@ -273,12 +308,16 @@ CREATE TABLE `urun` (
 --
 
 INSERT INTO `urun` (`id`, `slug`, `urun_adi`, `fiyati`, `aciklama`, `olusturulma_tarihi`, `guncelleme_tarihi`, `silinme_tarihi`) VALUES
-(1, 'laravel-8-framework', 'Something else', '5.334', 'Something else', '2021-03-12 14:36:59', '2021-03-25 14:17:08', NULL),
+(1, 'laravel-8-framework', 'Something else', '5.334', 'Something else', '2021-03-12 14:36:59', '2021-03-27 14:47:59', '2021-03-27 14:47:59'),
 (2, '1-laravel-8-framework', 'asdasdasdasd', '5.450', 'asdasdasdasd', '2021-03-12 14:38:39', '2021-03-25 16:01:08', '2021-03-25 16:01:08'),
 (3, 'lorem-ipsim-ipsum', 'Lorem ipsum', '444.680', 'Lorem ipsum Lorem ipsumLorem ipsum', '2021-03-12 14:39:55', '2021-03-25 16:03:33', '2021-03-25 16:03:33'),
 (4, '3-laravel-8-framework', '1Something', '7.620', '1m typesettingIp sum is stypeset tingimply dummy text of\n                the prit ypesetting nting and  industry. Lorem', '2021-03-12 14:40:32', '2021-03-25 16:01:17', '2021-03-25 16:01:17'),
-(5, 'telefon-samsung-galaxy-a51', 'Telefon Samsung Galaxy A51', '590.900', 'Telefon Samsung Galaxy A51', '2021-03-25 14:05:04', '2021-03-25 14:28:09', NULL),
-(6, 'telefon-samsung-galaxy-a71', 'Telefon Samsung Galaxy A71', '670.900', 'Samsung galaxy a71', '2021-03-25 15:47:56', '2021-03-25 15:47:56', NULL);
+(5, 'telefon-samsung-galaxy-a51', 'Telefon Samsung Galaxy A51', '590.900', 'Telefon Samsung Galaxy A51', '2021-03-25 14:05:04', '2021-03-27 14:53:35', '2021-03-27 14:53:35'),
+(6, 'telefon-samsung-galaxy-a71', 'Telefon Samsung Galaxy A71', '670.900', 'Samsung galaxy a71', '2021-03-25 15:47:56', '2021-03-25 15:47:56', NULL),
+(7, 'test321', 'Test321', '1234.000', 'Test321', '2021-03-26 14:10:12', '2021-03-27 14:52:29', '2021-03-27 14:52:29'),
+(8, 'telefon-samsung-galaxy-a12', 'Telefon Samsung Galaxy A12', '290.000', 'Telefon Samsung Galaxy A12', '2021-03-26 15:22:11', '2021-03-26 15:22:11', NULL),
+(9, 'telefon-samsung-galaxy-a1212', 'Telefon Samsung Galaxy A12', '290.000', 'Telefon Samsung Galaxy A12', '2021-03-26 15:22:34', '2021-03-27 14:52:41', '2021-03-27 14:52:41'),
+(10, 'telefon-samsung-galaxy-a121212', 'Telefon Samsung Galaxy A12', '290.000', 'Telefon Samsung Galaxy A12', '2021-03-26 15:23:25', '2021-03-26 15:23:25', NULL);
 
 -- --------------------------------------------------------
 
@@ -293,19 +332,24 @@ CREATE TABLE `urundetay` (
   `goster_gunun_firsati` tinyint(1) NOT NULL DEFAULT 0,
   `goster_one_cikan` tinyint(1) NOT NULL DEFAULT 0,
   `goster_cok_satan` tinyint(1) NOT NULL DEFAULT 0,
-  `goster_indirimli` tinyint(1) NOT NULL DEFAULT 0
+  `goster_indirimli` tinyint(1) NOT NULL DEFAULT 0,
+  `urun_resmi` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `urundetay`
 --
 
-INSERT INTO `urundetay` (`id`, `urun_id`, `goster_slider`, `goster_gunun_firsati`, `goster_one_cikan`, `goster_cok_satan`, `goster_indirimli`) VALUES
-(1, 1, 0, 0, 0, 0, 1),
-(3, 3, 1, 1, 1, 1, 1),
-(4, 4, 0, 0, 0, 0, 1),
-(5, 5, 1, 1, 1, 1, 1),
-(48, 6, 1, 1, 1, 0, 0);
+INSERT INTO `urundetay` (`id`, `urun_id`, `goster_slider`, `goster_gunun_firsati`, `goster_one_cikan`, `goster_cok_satan`, `goster_indirimli`, `urun_resmi`) VALUES
+(1, 1, 0, 0, 0, 0, 1, '1-1616788086.jpg'),
+(3, 3, 1, 1, 1, 1, 1, NULL),
+(4, 4, 0, 0, 0, 0, 1, NULL),
+(5, 5, 1, 1, 1, 1, 1, NULL),
+(48, 6, 1, 1, 1, 0, 0, NULL),
+(49, 7, 1, 1, 0, 0, 0, NULL),
+(50, 8, 0, 1, 1, 0, 0, NULL),
+(51, 9, 0, 1, 1, 0, 0, NULL),
+(52, 10, 0, 1, 1, 0, 0, '10-1616787078.jpg');
 
 -- --------------------------------------------------------
 
@@ -327,6 +371,12 @@ CREATE TABLE `users` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `ayar`
+--
+ALTER TABLE `ayar`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `failed_jobs`
@@ -408,6 +458,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `ayar`
+--
+ALTER TABLE `ayar`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -423,19 +479,19 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `kategori_urun`
 --
 ALTER TABLE `kategori_urun`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `kullanici`
 --
 ALTER TABLE `kullanici`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `sepet`
@@ -447,19 +503,19 @@ ALTER TABLE `sepet`
 -- AUTO_INCREMENT for table `sepet_urun`
 --
 ALTER TABLE `sepet_urun`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `urun`
 --
 ALTER TABLE `urun`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `urundetay`
 --
 ALTER TABLE `urundetay`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `users`

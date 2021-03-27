@@ -6,28 +6,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="809203e2-9060-447d-ba27-5fd3b1a96af9" name="Default Changelist" comment="v7">
-      <change afterPath="$PROJECT_DIR$/resources/views/yonetim/kategori/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/yonetim/kategori/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/yonetim/urun/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/yonetim/urun/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8a58409-4e02-4d7b-99d9-5237edf26fa1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8a58409-4e02-4d7b-99d9-5237edf26fa1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AnasayfaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AnasayfaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Yonetim/AnasayfaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Yonetim/AnasayfaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Kategori.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Kategori.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Urun.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Urun.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UrunDetay.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UrunDetay.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Yonetim/KullaniciController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Yonetim/KullaniciController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Yonetim/UrunController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Yonetim/UrunController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_02_183545_create_urun_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_02_183545_create_urun_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/az/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/az/validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/anasayfa.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/anasayfa.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/urun.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/urun.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/yonetim/anasayfa.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/yonetim/anasayfa.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/yonetim/kullanici/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/yonetim/kullanici/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/yonetim/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/yonetim/layouts/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/yonetim/layouts/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/yonetim/layouts/partials/navbar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/yonetim/layouts/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/yonetim/layouts/partials/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/yonetim/oturumac.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/yonetim/oturumac.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/yonetim/urun/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/yonetim/urun/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/yonetim/urun/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/yonetim/urun/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,6 +152,8 @@
       <path value="$PROJECT_DIR$/vendor/hardevine/shoppingcart" />
       <path value="$PROJECT_DIR$/vendor/laravel/helpers" />
       <path value="$PROJECT_DIR$/vendor/uxweb/sweet-alert" />
+      <path value="$PROJECT_DIR$/vendor/unisharp/laravel-filemanager" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
     </include_path>
   </component>
   <component name="ProjectId" id="1pLvfm6seOdI8nnt1o6odi4jy1l" />
@@ -209,7 +210,9 @@
       <workItem from="1616505505406" duration="3750000" />
       <workItem from="1616517681744" duration="8907000" />
       <workItem from="1616610779333" duration="9236000" />
-      <workItem from="1616685207707" duration="10283000" />
+      <workItem from="1616685207707" duration="10664000" />
+      <workItem from="1616778782118" duration="6585000" />
+      <workItem from="1616844609570" duration="17999000" />
     </task>
     <task id="LOCAL-00001" summary="v7">
       <created>1615757745440</created>
@@ -255,14 +258,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="164" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1615836082177" />
-    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616695150012">
+    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616859337266">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1616695150012" />
+    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1616859337266" />
     <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1615833390809">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1615833390809" />
+    <state width="904" height="185" key="GridCell.Tab.0.bottom" timestamp="1616867493884">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="904" height="185" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616867493884" />
+    <state width="904" height="185" key="GridCell.Tab.0.center" timestamp="1616867493884">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="904" height="185" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1616867493884" />
+    <state width="904" height="185" key="GridCell.Tab.0.left" timestamp="1616867493884">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="904" height="185" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1616867493884" />
+    <state width="904" height="185" key="GridCell.Tab.0.right" timestamp="1616867493884">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="904" height="185" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1616867493884" />
     <state width="246" height="457" key="HiddenNamespacesPopup" timestamp="1615054845634">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -271,21 +290,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="478" y="85" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1616442154192" />
-    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1616618905166">
+    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1616874649551">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1616618905166" />
-    <state x="526" y="135" width="485" height="457" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1616695486483">
+    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1616874649551" />
+    <state x="470" y="65" key="RollbackChangesDialog" timestamp="1616859805687">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="526" y="135" width="485" height="457" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1616695486483" />
+    <state x="470" y="65" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1616859805687" />
+    <state x="526" y="135" width="485" height="457" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1616786597356">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="526" y="135" width="485" height="457" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1616786597356" />
     <state x="391" y="0" width="585" height="801" key="find.popup" timestamp="1616526875671">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="391" y="0" width="585" height="801" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1616526875671" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1616521886269">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1616857501201">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1616521886269" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1616857501201" />
   </component>
 </project>

@@ -12,7 +12,8 @@
         <div class="bg-content">
             <div class="row">
                 <div class="col-md-5">
-                    <img src="http://via.placeholder.com/400x200/?text=UrunResmi">
+                    <img style="width: 400px" src="{{ $urun->detay->urun_resmi!=null ? asset('uploads/urunler/' . $urun->detay->urun_resmi) : 'http://via.placeholder.com/400x200?text=UrunResmi' }}">
+
                     <hr>
                     <div class="row">
                         <div class="col-xs-3">

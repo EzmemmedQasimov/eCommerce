@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Yonetim;
 
 use App\Http\Controllers\Controller;
+use App\Models\Kategori;
 use App\Models\Urun;
+use App\Models\UrunDetay;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -28,16 +30,21 @@ class UrunController extends Controller
 
     public function form($id = 0){
         $entry = new Urun;
+        $urun_kategorileri = [];
+
+        $kategoriler = Kategori::all();
         if($id>0){
             $entry = Urun::find($id);
+            $urun_kategorileri = $entry->kategoriler()->pluck('kategori_id');
         }
-        return view('yonetim.urun.form',compact('entry'));
+        return view('yonetim.urun.form',compact(['entry','kategoriler','urun_kategorileri']));
     }
 
     public function kaydet($id = 0)
     {
 
         $data = request()->only('urun_adi', 'slug', 'aciklama', 'fiyati');
+        $kategoriler = request('kategoriler');
         if (!request()->filled('slug')) {
             $data['slug'] = str_slug(request('urun_adi'));
             request()->merge(['slug' => $data['slug']]);
@@ -54,15 +61,40 @@ class UrunController extends Controller
             $entry = Urun::where('id', $id)->firstOrFail();
             $entry->update($data);
             $entry->detay()->update($data_detay);
+            $entry->kategoriler()->sync($kategoriler);
 
         } else {
             $entry = Urun::create($data);
             $entry->detay()->create($data_detay);
+            $entry->kategoriler()->attach($kategoriler);
+        }
+
+        if (request()->hasFile('urun_resmi')) {
+            $this->validate(request(), [
+                'urun_resmi' => 'image|mimes:jpg,png,jpeg,gif|max:2048'
+            ]);
+
+            $urun_resmi = request()->file('urun_resmi');
+            //$urun_resmi = request()->urun_resmi;
+
+            $dosyaadi = $entry->id . "-" . time() . "." . $urun_resmi->extension();
+            //$dosyaadi = $urun_resmi->getClientOriginalName();
+            //$dosyaadi = $urun_resmi->hashName();
+
+            if ($urun_resmi->isValid()) {
+
+                $urun_resmi->move('uploads/urunler', $dosyaadi);
+
+                UrunDetay::updateOrCreate(
+                    ['urun_id' => $entry->id],
+                    ['urun_resmi' => $dosyaadi]
+                );
+            }
         }
 
         return redirect()
             ->route('yonetim.urun.duzenle', $entry->id)
-            ->with('mesaj', ($id > 0 ? 'Güncellendi' : 'Kaydedildi'))
+            ->with('mesaj', ($id > 0 ? 'Güncəlləndi' : 'Saxlanıldı'))
             ->with('mesaj_turu', 'success');
     }
 
@@ -76,7 +108,7 @@ class UrunController extends Controller
 
         return redirect()
             ->route('yonetim.urun')
-            ->with('mesaj', 'Kayıt silindi')
+            ->with('mesaj', 'Silindi')
             ->with('mesaj_turu', 'success');
     }
 }

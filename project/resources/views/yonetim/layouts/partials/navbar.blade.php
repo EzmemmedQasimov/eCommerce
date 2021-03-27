@@ -1,19 +1,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <button type="button" class="navbar-toggle collapsed pull-left visible-xs" data-toggle="collapse" data-target="#sidebar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{ route('anasayfa') }}">Laravel Ecommerce</a>
+            <a class="navbar-brand" href="{{ route('anasayfa') }}">Laravel Eticarət</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 
@@ -23,11 +11,11 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#">Action</a>
+                            <a href="#">Profil</a>
                         </li>
                         <li role="separator" class="divider"></li>
                         <li>
-                            <a href="{{ route('yonetim.oturumukapat') }}">Logout</a>
+                            <a href="{{ route('yonetim.oturumukapat') }}">Çıxış</a>
                         </li>
                     </ul>
                 </li>
